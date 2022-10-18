@@ -8,66 +8,228 @@
 }
 /* Aqui lo que hace es configurar la imagen que se tiene de fondo */
 body{
-    background-image: url(../images/bg-2.jpg);
+    background-image: url(../images/bg-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
-/*Se configura el padding para que no este tan */
+/*Se configura el padding para que no este tan arriba y un margen automatico para responsive*/
 main{
     width: 100%;
     padding: 20px;
     margin: auto;
     margin-top: 100px;    
 }
-
+/*Se crean los aspectos que tiene el contenedor general que almacena todo lo demas */
 .contenedor_general{
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
+
     margin: auto;
     position: relative;
 }
 
 .limite{
     width: 100%;
-    padding: 10px 20px;
+    padding-top: 200px 20px;
     display: flex;
+    align-items: center;
     justify-content: center;
     backdrop-filter: blur(10px);
     background-color: rgb(0,128,255,0.5);
 }
-
+.limite_login{
+    padding: 5px 5px;
+}
+.limite_registro{
+    padding: 30px 20px;
+}
+/*Se le da un formato general a los divs que estan en la clase limite en este caso un margen tanto superior como de la parte izquierda*/
 .limite div{
-    margin:100px 40px;
+    margin:50px 40px;
     color: white;
     transition: all 500ms;
 }
-
+/*Se le da un formato general a los divs y botones, en este caso un margen en la parte superior de ellos para que esten mas separados*/
 .limite div p,
 .limite div button{
-    margin-top: 30px;
+    margin-top: 20px;
 }
-
+/* establece el grosor de la letra y el tamaño que tiene*/
 .limite div h3{
-    font-weight: 400;
+    font-weight: 600;
     font-size: 26px;
 }
-
+/*Propiedades del botton, en este caso un borde, se le quita el fondo, se configura la fuente  y tamaño y color, transform agrega una pequeña animacion*/
 .limite button{
     padding: 10px 40px;
     border: 2px solid white;
     background: transparent;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 800;
     cursor: pointer;
     color: white;
     outline: none;
     transform: all 300ms;
 }
-
+/*cuando se pone el mouse sobre el boton cambia de color*/
 .limite button:hover{
     background: white;
     color: #46A2FD;
 }
 
+/*Formularios*/
+.contenedor_formularios{
+    display: flex;
+    align-items: center;
+    width:100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left:10px;
+    /*Esta parte del codigo hace una bonita animacion de desplazamiento*/
+    transition: left 500ms cubic-bezier(0.175,0.885,0.32,1.275);
+}
+.contenedor_formularios form{
+    width: 100%;
+    padding: 20px 20px;
+    background: #fff;
+   border-radius: 20px;
+    position: absolute;
+}
+/*Codigo para personalizar los botones de radio*/
+
+.opcion-radio input[type=radio] {
+    position: absolute;
+    opacity: 0;
+}
+.opcion-radio input[type=radio] + label:before {
+    content: '';
+    background: #F4F5F8;
+    border-radius: 100%;
+    border: 1px solid #a6aec6;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    position: relative;
+    top: -.2em;
+    margin-right: .5em;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+    display: inline-block;
+    vertical-align: middle;
+}
+.opcion-radio input[type=radio]:checked + label:before {
+    background-color: #8879FF;
+    box-shadow: inset 0 0 0 4px #F4F5F8;
+}
+.opcion-radio label {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 32px;
+}
+/*Codigo para personalizar el select */
+.contenedor_formularios select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+.contenedor_formularios::-ms-expand {
+    display: none;
+}
+.contenedor_formularios select{
+    margin-top: 10px;
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+  	padding: 7px 10px;
+  	height: 42px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #7b7b7b;
+	font-size: 1em;
+	color: #999;
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+ 
+
+/*Me lo robe de por ahi*/
+.contenedor_formularios form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #46a2fd;
+}
+.contenedor_formularios form input{
+    width:100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 16px;
+    outline: none;
+}
+
+.contenedor_formularios form button{
+    width: 100%;
+    margin-top: 40px;
+    padding: 10px 40px;
+    border: none;
+    background: #46a2fd;
+    font-size: 14px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.formulario_login{
+    opacity: 1;
+    display: block;
+}
+.formulario_registro_alumnos{
+    display:none;
+}
+.formulario_registro_docentes{
+    display:none;
+}
+.formulario_registro_externos{
+    display:none;
+}
+
+/*Diseño para responsive*/
+
+@media screen and (max-width: 850px){
+    main{
+        margin-top: 50px;
+    }
+    .limite{
+        max-width: 350px;
+        height:300px;
+        flex-direction: column;
+        margin:auto;
+    }
+    .limite div{
+        margin: 0px;
+        position: absolute;
+    }
+    .contenedor_formularios{
+        top: -10px;
+        left:-5px;
+        margin:auto;
+    }
+    .contenedor_formularios form{
+        position:relative;
+    }
+}
