@@ -82,7 +82,7 @@
                   <option value="8">Octavo semestre</option>
               </select>
               <i></i>
-              <input type="email" placeholder="Correo electrónico" required/>
+              <input type="email" pattern='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$' placeholder="Correo electrónico" required/>
               <input type="text" placeholder="Número telefónico" minlength="10" maxlength="10" onkeypress="return event.charCode>=48 && event.charCode<=57" required/>
               <!-- La funcion usada en on key arriba es para evitar letras en el numero telefonico-->
               <input type="password" placeholder="Contraseña" />
@@ -117,7 +117,7 @@
                 <option value="2">Maestro/a</option>
                 <option value="3">Doctor/a</option>
               </select>
-            <input type="email" placeholder="Correo electrónico" required/><span id="emailOK"></span>
+            <input type="email" pattern='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$' title="Entre un email válido" placeholder="Correo electrónico" required/>
             <input type="text" placeholder="Número telefónico" minlength="10" maxlength="10" onkeypress="return event.charCode>=48 && event.charCode<=57" required/>
             <!-- La funcion usada en on key arriba es para evitar letras en el numero telefonico-->
             <input type="password" placeholder="Contraseña" />
@@ -133,7 +133,7 @@
           <input type="text" placeholder="Apellido paterno" onkeypress="return soloLetras(event)" required/>
           <input type="text" placeholder="Apellido materno" onkeypress="return soloLetras(event)" required/>
           <input type="text" placeholder="Procedencia" onkeypress="return soloLetras(event)" required/>        
-          <input type="email" placeholder="Correo electrónico" required/>
+          <input type="email" placeholder="Correo electrónico" pattern='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$' required/>
           <input type="text" placeholder="Número telefónico" minlength="10" maxlength="10" onkeypress="return event.charCode>=48 && event.charCode<=57" required/>
           <!-- La funcion usada en on key arriba es para evitar letras en el numero telefonico-->
           <input type="password" placeholder="Contraseña" />
