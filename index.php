@@ -1,3 +1,15 @@
+<?php
+    session_start();
+    if(isset($_SESSION['usuario_ad'])){
+        header("location: pagina_qr.php");
+    }
+    else if(isset($_SESSION['usuarioad'])){
+        header("location: menu_admin.php");
+    }
+    else if(isset($_SESSION['usuario_ex'])){
+      header("location: pagina_qr.php");
+  }
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -56,7 +68,7 @@
 
         <div class="contenedor_formularios">
 
-          <form action="" class="formulario_login">
+          <form action="login_alumno.php" method="POST" class="formulario_login">
               <h2>Iniciar sesión</h2>
               <input type="email" name="correo_login" placeholder="Correo electrónico" />
               <input type="password" name="pass_login" placeholder="Contraseña" />
