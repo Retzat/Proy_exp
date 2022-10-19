@@ -14,7 +14,7 @@
     $password2=$_POST['pass2_al'];
     $participacion=$_POST['participacion_al'];
     //aseguramos que no haya campos vacios
-    if($nombres == "" || $ap_paterno == "" || $ap_materno == "" || $matricula == "" || $semestre == "" || $email == "" || $telefono == "" || $password == "" || $password2 == "" || $participacion == ""){
+    if($nombres == "" || $ap_paterno == "" || $matricula == "" || $semestre == "" || $email == "" || $telefono == "" || $password == "" || $password2 == "" || $participacion == ""){
         echo '<script>alert("No se permiten campos vacios");window.location="index.php";</script>';
     }else{
         $ban=true;
@@ -44,8 +44,10 @@
     }
     //ejecutar la consulta si 
     if ($password==$password2 && $ban==true){
+        //Encriptamiento de contraseña
+        $contra_encriptada=hash('sha512',$password);
         $query="INSERT INTO alumnos (nombres, ap_paterno, ap_materno, nc, semestre, email_al, pass, participacion, telefono) 
-        VALUES ('$nombres', '$ap_paterno', '$ap_materno', '$matricula', '$semestre', '$email', '$password', '$participacion', '$telefono')";
+        VALUES ('$nombres', '$ap_paterno', '$ap_materno', '$matricula', '$semestre', '$email', '$contra_encriptada', '$participacion', '$telefono')";
         $ejecutar = mysqli_query($conexion, $query);
         if($ejecutar){
             echo '<script>alert("Te has registrado correctamente, ya puedes iniciar sesion");window.location="index.php";</script>';
