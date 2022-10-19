@@ -63,7 +63,7 @@
               <button>Iniciar sesión</button>
           </form>
 
-          <form action="" class="formulario_registro_alumnos">
+          <form action="registro_alumnos.php" method="post" class="formulario_registro_alumnos">
               <h2>Registrarse</h2>
               <!--Recoleccion de datos de alumnos-->
               <input type="text" name="nombres_al" placeholder="Nombres" onkeypress="return soloLetras(event)"  requiered/>
