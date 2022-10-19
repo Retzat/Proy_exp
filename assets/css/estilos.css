@@ -95,8 +95,12 @@ main{
     width: 100%;
     padding: 20px 20px;
     background: #fff;
-   border-radius: 20px;
+    border-radius: 20px;
     position: absolute;
+}
+.contenedor_formularios h5{
+    padding-top: 20px;
+    font-size: 12px;
 }
 /*Codigo para personalizar los botones de radio*/
 
