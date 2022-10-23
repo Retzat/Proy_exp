@@ -4,7 +4,7 @@
         header("location: pagina_qr.php");
     }
     else if(isset($_SESSION['usuarioad'])){
-        header("location: menu_admin.php");
+        header("location: Admin/pag_admin.php");
     }
     else if(isset($_SESSION['usuario_ex'])){
       header("location: pagina_qr.php");

@@ -7,7 +7,7 @@
 
 
 <?php
-require('./fpdf.php');
+/*require('./fpdf.php');
  
 $pdf=new FPDF();
 $pdf->AddPage();
@@ -47,4 +47,4 @@ $pdf->Ln();
 $pdf->Image('assets/fpdf-code.png', null, null, 180);
 
 // output file
-$pdf->Output('', 'fpdf-complete.pdf');
+$pdf->Output('', 'fpdf-complete.pdf');*/

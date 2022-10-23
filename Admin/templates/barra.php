@@ -14,7 +14,7 @@
         <a href="../index.html" class="nav-link">Inicio</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Cerrar sesion</a>
+        <a href="../cerrar_sesion.php" class="nav-link">Cerrar sesion</a>
       </li>
     </ul>
 

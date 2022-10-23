@@ -18,7 +18,7 @@
     }
     else if(mysqli_num_rows($validar_login_do)>0){
         $_SESSION['usuarioad']=$email;
-        header("location: pagina_adm.php");
+        header("location: Admin/pag_admin.php");
     }
     else if(mysqli_num_rows($validar_login_do)>0){
         $_SESSION['usuario_ex']=$email;

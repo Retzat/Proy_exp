@@ -36,8 +36,10 @@
         exit();
         mysqli_close($conexion);
     }
-    $verificar_correo= mysqli_query($conexion, "SELECT * FROM alumnos WHERE email_al='$email'");
-    if (mysqli_num_rows($verificar_correo)>0){
+    $verificar_correo1= mysqli_query($conexion, "SELECT * FROM docente WHERE email_doc='$email'");
+    $verificar_correo2= mysqli_query($conexion, "SELECT * FROM alumnos WHERE email_al='$email'");
+    $verificar_correo3= mysqli_query($conexion, "SELECT * FROM externos WHERE email_ex='$email'");
+    if (mysqli_num_rows($verificar_correo1)>0 || mysqli_num_rows($verificar_correo2)>0 || mysqli_num_rows($verificar_correo3)>0){
         echo '<script>alert("Este correo ya está registrado, intenta con otro diferente");window.location="index.php";</script>';
         exit();
         mysqli_close($conexion);
