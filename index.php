@@ -116,7 +116,7 @@
               <button type="submit">Registrarse</button>            
           </form>
 
-          <form action="" class="formulario_registro_docentes">
+          <form action="registro_docentes_index.php" method="POST" class="formulario_registro_docentes">
             <h2>Registrarse</h2>
             <!--Recoleccion de datos de docentes-->
             <input type="text" name="nombres_do" placeholder="Nombres" onkeypress="return soloLetras(event)"  requiered/>

@@ -2,6 +2,7 @@
     session_start();
     include'conexion_be.php';
 
+    $ban=false;
     $email=$_POST['correo_login'];
     $pass=$_POST['pass_login'];
     //echo $email.$pass;
@@ -17,15 +18,24 @@
         //echo '<script>window.location="pagina_qr.php";</script>';
     }
     else if(mysqli_num_rows($validar_login_do)>0){
+        $validar_login_do2=mysqli_query($conexion, "SELECT * FROM docente WHERE email_doc='$email' AND pass='$contra_encriptada' AND permiso='1'");
+        //echo '<script>alert("Entre a admins")</script>';
+        if(mysqli_num_rows($validar_login_do2)>0){
         $_SESSION['usuarioad']=$email;
         header("location: Admin/pag_admin.php");
+        }
+        else{
+            echo '<script>alert("No tienes permiso para acceder");window.location="index.php";</script>';
+            exit();
+        }
     }
-    else if(mysqli_num_rows($validar_login_do)>0){
+    else if(mysqli_num_rows($validar_login_ex)>0){
         $_SESSION['usuario_ex']=$email;
         header("location: pagina_qr.php");
     }
     else{
         echo '<script>alert("Usuario o contraseña incorrectos");window.location="index.php";</script>';
         exit();
+
     }
 ?>
