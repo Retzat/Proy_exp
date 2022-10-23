@@ -150,7 +150,7 @@
             
         </form>
 
-        <form action="" class="formulario_registro_externos">
+        <form action="" methos="POST" class="formulario_registro_externos">
           <h2>Registrarse</h2>
           <!--Recoleccion de datos de personas externas-->
           <input type="text" name="nombres_ex" placeholder="Nombres" onkeypress="return soloLetras(event)"  requiered/>
