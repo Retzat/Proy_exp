@@ -13,10 +13,12 @@
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="js/demo.js"> </script>
+<!-- AdminLTE for demo purposes <script src="js/demo.js"> </script> -->
+
 <!-- SweetAlert2 -->
 <script src="js/sweetalert2.min.js"></script>
+<!-- Aqui se pone el js de sweetalert -->
+<script src="js/admin-ajax.js"></script>
 
 </body>
 </html>

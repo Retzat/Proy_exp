@@ -1,10 +1,8 @@
 <?php
 include_once 'funciones/funciones.php';
 
-echo "<pre>";
-var_dump($_POST);
-echo "</pre>";
 if (isset($_POST['add_adm'])){
+    //die(json_encode($_POST));
     $ban=false;
     $nombres=$_POST['nombres_do'];
     $ap_paterno=$_POST['ap_pat_do'];
