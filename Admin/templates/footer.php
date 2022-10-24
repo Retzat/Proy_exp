@@ -14,6 +14,9 @@
 <!-- AdminLTE App -->
 <script src="js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<script src="js/demo.js"> </script>
+<!-- SweetAlert2 -->
+<script src="js/sweetalert2.min.js"></script>
+
 </body>
 </html>

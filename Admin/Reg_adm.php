@@ -57,7 +57,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form class="form-horizontal" method="post" action="registro_docentes_adm.php">
+              <form class="form-horizontal" id="crear-admin" method="post" action="registro_docentes_adm.php">
                 <div class="card-body">
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Nombres</label>

@@ -31,7 +31,7 @@
     }
     else if(mysqli_num_rows($validar_login_ex)>0){
         $_SESSION['usuario_ex']=$email;
-        header("location: pagina_qr.php");
+        header("location: pagina_qrex.php");
     }
     else{
         echo '<script>alert("Usuario o contraseña incorrectos");window.location="index.php";</script>';

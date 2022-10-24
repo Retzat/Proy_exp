@@ -75,7 +75,7 @@
               <button>Iniciar sesión</button>
           </form>
 
-          <form action="registro_alumnos.php" method="POST" class="formulario_registro_alumnos">
+          <form action="php/registro_alumnos.php" method="POST" class="formulario_registro_alumnos">
               <h2>Registrarse</h2>
               <!--Recoleccion de datos de alumnos-->
               <input type="text" name="nombres_al" placeholder="Nombres" onkeypress="return soloLetras(event)"  requiered/>
@@ -116,7 +116,7 @@
               <button type="submit">Registrarse</button>            
           </form>
 
-          <form action="registro_docentes_index.php" method="POST" class="formulario_registro_docentes">
+          <form action="php/registro_docentes_index.php" method="POST" class="formulario_registro_docentes">
             <h2>Registrarse</h2>
             <!--Recoleccion de datos de docentes-->
             <input type="text" name="nombres_do" placeholder="Nombres" onkeypress="return soloLetras(event)"  requiered/>
@@ -150,7 +150,7 @@
             
         </form>
 
-        <form action="" methos="POST" class="formulario_registro_externos">
+        <form action="php/registro_externos.php" method="POST" class="formulario_registro_externos">
           <h2>Registrarse</h2>
           <!--Recoleccion de datos de personas externas-->
           <input type="text" name="nombres_ex" placeholder="Nombres" onkeypress="return soloLetras(event)"  requiered/>
