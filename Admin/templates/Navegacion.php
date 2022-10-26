@@ -69,7 +69,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="pag_admin_tables_eventos.php" class="nav-link">
                   <i class="fa-regular fa-calendar-plus"></i>
                   <p>  Registrar Evento</p>
                 </a>
@@ -86,17 +86,23 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="pag_admin_tables_al.php" class="nav-link">
                   <i class="fa-solid fa-list-ul"></i>
                   <p>Ver lista alumnos</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="pag_admin_tables_ex.php" class="nav-link">
                   <i class="fa-regular fa-rectangle-list"></i>
                   <p>Ver lista externos</p>
                 </a>
-              </li>              
+              </li>
+              <li class="nav-item">
+                <a href="pag_admin_tables.php" class="nav-link">
+                  <i class="fa-regular fa-rectangle-list"></i>
+                  <p>Ver Docentes</p>
+                </a>
+              </li>               
             </ul>
           </li>
           

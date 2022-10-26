@@ -80,7 +80,7 @@
               <!--Recoleccion de datos de alumnos-->
               <input type="text" name="nombres_al" placeholder="Nombres" onkeypress="return soloLetras(event)"  requiered/>
               <input type="text" name="ap_pat_al" placeholder="Apellido paterno" onkeypress="return soloLetras(event)" required/>
-              <input type="text" name="ap_mat_al" placeholder="Apellido materno" onkeypress="return soloLetras(event)" required/>
+              <input type="text" name="ap_mat_al" placeholder="Apellido materno" onkeypress="return soloLetras(event)" />
               <input type="text" name="num_control_al" placeholder="Número de control" minlength="9" maxlength="9" onkeypress="return check(event)" required/>
               <h5>Selecciona semestre</h5>
               <select name="semestre_al" required>
@@ -121,7 +121,7 @@
             <!--Recoleccion de datos de docentes-->
             <input type="text" name="nombres_do" placeholder="Nombres" onkeypress="return soloLetras(event)"  requiered/>
             <input type="text" name="ap_pat_do" placeholder="Apellido paterno" onkeypress="return soloLetras(event)" required/>
-            <input type="text" name="ap_mat_do" placeholder="Apellido materno" onkeypress="return soloLetras(event)" required/>
+            <input type="text" name="ap_mat_do" placeholder="Apellido materno" onkeypress="return soloLetras(event)" />
             <h5>Selecciona puesto de academia</h5>
             <select name="puesto" name="puesto_do" placeholder="puesto" required>
               <option value="">Elige una opción</option>
@@ -155,7 +155,7 @@
           <!--Recoleccion de datos de personas externas-->
           <input type="text" name="nombres_ex" placeholder="Nombres" onkeypress="return soloLetras(event)"  requiered/>
           <input type="text" name="ap_pat_ex" placeholder="Apellido paterno" onkeypress="return soloLetras(event)" required/>
-          <input type="text" name="ap_mat_ex" placeholder="Apellido materno" onkeypress="return soloLetras(event)" required/>
+          <input type="text" name="ap_mat_ex" placeholder="Apellido materno" onkeypress="return soloLetras(event)" />
           <input type="text" name="procedencia_ex" placeholder="Procedencia" onkeypress="return soloLetras(event)" required/>        
           <input type="email" name="email_ex" placeholder="Correo electrónico" pattern='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$' required/>
           <input type="text" name="tel_ex" placeholder="Número telefónico" minlength="10" maxlength="10" onkeypress="return event.charCode>=48 && event.charCode<=57" required/>

@@ -1,6 +1,6 @@
 <?php
 
-    include("conexion_be.php");
+    include("../conexion_be.php");
 
     $ban=false;
     $nombres=$_POST['nombres_al'];
@@ -49,7 +49,6 @@
     if ($password==$password2 && $ban==true){
         //Encriptamiento de contraseña
         $contra_encriptada=hash('sha512',$password);
-        $ejecutar = mysqli_query($conexion, $query);
         $query="INSERT INTO alumnos (nombres, ap_paterno, ap_materno, nc, semestre, email_al, pass, participacion, telefono) 
         VALUES ('$nombres', '$ap_paterno', '$ap_materno', '$matricula', '$semestre', '$email', '$contra_encriptada', '$participacion', '$telefono')";
         $ejecutar = mysqli_query($conexion, $query);

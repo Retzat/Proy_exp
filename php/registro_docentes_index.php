@@ -1,5 +1,5 @@
 <?php
-include("conexion_be.php");
+include("../conexion_be.php");
 
 $ban=false;
 $nombres=$_POST['nombres_do'];
@@ -39,7 +39,7 @@ if ($password==$password2 && $ban==true){
     //Encriptamiento de contraseña
     $contra_encriptada=hash('sha512',$password);
     $query="INSERT INTO docente (nombres, ap_paterno, ap_materno, puesto, rfc, grado, email_doc, telefono, pass, permiso) 
-    VALUES ('$nombres', '$ap_paterno', '$ap_materno',$puesto, '$rfc', '$grado', '$email','$telefono', '$contra_encriptada', '0')";
+    VALUES ('$nombres', '$ap_paterno', '$ap_materno',$puesto, '$rfc', '$grado', '$email','$telefono', '$contra_encriptada', 0)";
     $ejecutar = mysqli_query($conexion, $query);
     if($ejecutar){
         echo '<script>alert("Se ha registrado correctamente, por favor, espere que un administrador acepte su registro");window.location="../index.php";</script>';
