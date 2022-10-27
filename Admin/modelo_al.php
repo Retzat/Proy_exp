@@ -42,3 +42,30 @@ if (isset($_POST['edit_al'])){
     mysqli_close($conexion);   
 }
     
+if (isset($_POST['edit_ex'])){
+    $ban=false;
+    $nombres=$_POST['nombres_ex'];
+    $ap_paterno=$_POST['ap_pat_ex'];
+    $ap_materno=$_POST['ap_mat_ex'];
+    $procedencia=$_POST['procedencia_ex'];
+    $email=$_POST['email_ex'];
+    $telefono=$_POST['tel_ex'];
+    $participacion=$_POST['participacion_ex'];
+    if($nombres == "" || $ap_paterno == "" || $procedencia == "" || $email == "" || $telefono == "" || $participacion == ""){
+        echo '<script>alert("No se permiten campos vacios");window.location="pag_admin_tables_ex.php";</script>';
+        exit();
+    }else{
+        $ban=true;
+        //echo '<script>alert("Todo bien");window.location="pag_admin_tables_ex.php";</script>';
+    }
+    $query="UPDATE externos SET nombres='$nombres', ap_paterno='$ap_paterno', ap_materno='$ap_materno', procedencia='$procedencia',
+    telefono='$telefono', participacion=$participacion WHERE email_ex='$email'";
+        $ejecutar = mysqli_query($conexion, $query);
+        if($ejecutar){
+            echo '<script>alert("Se ha actualizado correctamente el registro");window.location="pag_admin_tables_ex.php";</script>';
+        }
+        else{
+            echo '<script>alert("No se pudo actualizar, intentalo de nuevo");window.location="pag_admin_tables_ex.php";</script>';
+        }    
+    mysqli_close($conexion);
+}

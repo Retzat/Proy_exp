@@ -72,10 +72,10 @@
                           <td><?php echo $externos['email_ex']; ?></td>
                           <td><?php echo $externos['telefono']; ?></td>                          
                           <td>
-                            <a href="editar_docente.php?id=<?php echo $externos['email_ex']; ?>" class="btn bg-orange btn-flat margin"><!-- Esta clase es de fontawesome -->
+                            <a href="editar_externo.php?email=<?php echo $externos['email_ex']; ?>" class="btn bg-orange btn-flat margin"><!-- Esta clase es de fontawesome -->
                               <i class="fas fa-pencil-alt"></i>Editar
                             </a>
-                            <a href="#" data-id="<?php echo $externos['email_ex']; ?>" data-tipo="docente" class="btn bg-maroon btn-flat margin borrar_registro">
+                            <a href="#" data-id="<?php echo $externos['email_ex']; ?>" data-tipo="externo" class="btn bg-maroon btn-flat margin borrar_registro">
                               <i class="fas fa-trash"></i>Eliminar
                             </a>
                           </td>
@@ -102,7 +102,7 @@
               <!-- /.card-body -->
             </div>
               <div class="card-header">
-                <h3 class="card-title">Tabla con propiedades</h3>
+                <h3 class="card-title">Tabla para el registro de personas externas a la institucion</h3>
               </div>
               <!-- /.card-header -->
               
