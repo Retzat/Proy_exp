@@ -63,17 +63,23 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="pag_admin_tables_eventos.php" class="nav-link">
                 <i class="fa-solid fa-table-list"></i>
                   <p>  Ver eventos</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pag_admin_tables_eventos.php" class="nav-link">
+                <a href="crear_evento_al.php" class="nav-link">
                   <i class="fa-regular fa-calendar-plus"></i>
-                  <p>  Registrar Evento</p>
+                  <p>  Registrar evento estudiantes</p>
                 </a>
-              </li>              
+              </li>
+              <li class="nav-item">
+                <a href="crear_evento_ex.php" class="nav-link">
+                  <i class="fa-solid fa-calendar-plus"></i>
+                  <p>  Registrar evento externo</p>
+                </a>
+              </li>                
             </ul>
           </li> 
           <li class="nav-item">
@@ -93,7 +99,7 @@
               </li>
               <li class="nav-item">
                 <a href="pag_admin_tables_ex.php" class="nav-link">
-                  <i class="fa-regular fa-rectangle-list"></i>
+                  <i class="fa-solid fa-clipboard-list"></i>
                   <p>Ver lista externos</p>
                 </a>
               </li>
@@ -104,30 +110,59 @@
                 </a>
               </li>               
             </ul>
+            
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-users"></i>
+              <p>
+                Registro de asistencia
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="LectorQR_1.php" class="nav-link">
+                  <i class="fa-solid fa-signature"></i>
+                  <p>Primer registro</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="LectorQR_2.php" class="nav-link">
+                  <i class="fa-solid fa-file-signature"></i>
+                  <p>Segundo registro</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="LectorQR_3.php" class="nav-link">
+                  <i class="fa-solid fa-file-contract"></i>
+                  <p>Tercer registro</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pag_admin_tables_acreditados.php" class="nav-link">
+                  <i class="fa-solid fa-certificate"></i>
+                  <p>Alumnos que acreditan</p>
+                </a>
+              </li>                
+            </ul>
+            
           </li>
           
           <li class="nav-header">GENERAR</li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
+              <i class="fa-solid fa-id-card-clip"></i>
               <p>
-                Documentación
+                Datos documento
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="../gallery.html" class="nav-link">
-            <i class="fa-regular fa-file-excel"></i>
-              <p>
-                Generar Excel
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="reconocimientos/llamada_documentacion.php" class="nav-link">
               <i class="fa-solid fa-file"></i>
               <p>
-                Ver constancias
+                Generar constancias
               </p>
             </a>
           </li>
@@ -147,6 +182,15 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-user-slash"></i>
+              <p>
+                Eliminar todo
+              </p>
+            </a>
+          </li>
+          
           
       </nav>
       <!-- /.sidebar-menu -->
