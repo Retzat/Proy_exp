@@ -72,8 +72,9 @@
               <h2>Iniciar sesión</h2>
               <input type="email" name="correo_login" placeholder="Correo electrónico" />
               <input type="password" name="pass_login" placeholder="Contraseña" />
+              <a href="Recuperar.php">¿Olvidaste tu contraseña?</a>
               <button>Iniciar sesión</button>
-          </form>
+          </form>          
 
           <form action="php/registro_alumnos.php" method="POST" class="formulario_registro_alumnos">
               <h2>Registrarse</h2>

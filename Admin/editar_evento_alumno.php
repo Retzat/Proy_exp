@@ -14,7 +14,7 @@
     $horaInicio = $evento_al['hora_in'];
     $horaFinal = $evento_al['hora_fin'];
     $asesor = $evento_al['asesor'];
-    $identificador = $evento_al['identificador'];
+    $identificador = $evento_al['identificador'];}
   if(filter_var($email, FILTER_VALIDATE_STRING)){
     $sql = "SELECT * FROM eventos WHERE identificador = '$id'";
     $resultado = $conexion->query($sql);

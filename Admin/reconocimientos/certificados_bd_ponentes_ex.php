@@ -1,6 +1,26 @@
 <?php
 include("../../conexion_be.php");
-$res=mysqli_query($conexion,"select email_ex,nombres, ap_paterno, ap_materno, nombre_pon from externos,eventos_externos where email=email_ex");
+$sql = "SELECT * FROM datos_constancias WHERE id = 1";
+  $resultado = $conexion->query($sql);
+  $director = $resultado->fetch_assoc();
+  $nom_dir = $director['nombre_completo'];
+  $date_con = $director['Fecha'];
+  $grado_dir = $director['grado'];
+  $anio_dir = $director['anio'];
+  if ($grado_dir==1) {
+	$grado_d="Ing.";
+	}
+	else if($grado_dir==0){
+		$grado_d="Mtro.";
+	}
+	else if($grado_dir==2){
+		$grado_d="Mtro.";
+	}
+	else if($grado_dir==3){
+		$grado_d="Dr.";
+	}
+$res=mysqli_query($conexion,"select email_ex,nombres, ap_paterno, ap_materno, nombre_pon, grado from externos,eventos_externos,curriculum 
+where eventos_externos.email=email_ex and curriculum.email=email_ex; ");
 	
 	$font="arial.ttf";
 	$font_bold="arial-bold.ttf";
@@ -9,14 +29,25 @@ $res=mysqli_query($conexion,"select email_ex,nombres, ap_paterno, ap_materno, no
 	$color=imagecolorallocate($image,98,98,79);
 	$color_dir=imagecolorallocate($image,0,51,0);
 	while($row=mysqli_fetch_assoc($res)){
+		$grado=$row['grado'];
+		//echo $grado;
+		if ($grado==1) {
+			$grado="Ing.";
+		}
+		else if($grado==2){
+			$grado="Mtro.";
+		}
+		else if($grado==3){
+			$grado="Dr.";
+		}
 		$image=imagecreatefromjpeg("Constancia.jpg");
-		$name=$row['nombres']." ".$row['ap_paterno']." ".$row['ap_materno'];
+		$name=$grado." ".$row['nombres']." ".$row['ap_paterno']." ".$row['ap_materno'];
 		$letras="Por su destacada participación en el ";
 		$men_tema="con su tema: ";
 		$Tema='"'.$row['nombre_pon'].'"';
-		$evento='"Expo Sistemas 2022"';
-		$fecha="07 de septiembre de 2022";
-		$director="Mtro. Fermín Parra Luna";
+		$evento='"Evento de Exposistemas '.$anio_dir. '"';
+		$fecha=$date_con." de ".$anio_dir;
+		$director=$grado_d." ".$nom_dir;
 		$mensaje2="el cual se llevó a cabo el día ".$fecha;
 		$largo=strlen($name);
 		$largotema=strlen($Tema);

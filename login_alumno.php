@@ -30,8 +30,15 @@
         }
     }
     else if(mysqli_num_rows($validar_login_ex)>0){
-        $_SESSION['usuario_ex']=$email;
-        header("location: pagina_qrex.php");
+        $validar_curriculum=mysqli_query($conexion, "SELECT * FROM curriculum WHERE email='$email'");
+        if(mysqli_num_rows($validar_curriculum)>0){
+            $_SESSION['usuario_ex']=$email;
+            header("location: pagina_qrex.php");
+        }else{
+            $_SESSION['usuario_ex']=$email;
+            header("location: admin/Datos_ex.php");
+        }
+        
     }
     else{
         echo '<script>alert("Usuario o contraseña incorrectos");window.location="index.php";</script>';

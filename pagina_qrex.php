@@ -68,7 +68,7 @@
         </li>
     </ul>
     <div class="about">
-        <h3>Informacion para el estudiante</h3>
+        <h3>Informacion para el asistente</h3>
         <P>Conserva este codigo QR, Pues se te pedira durante el evento</P>
     </div>
 </body>

@@ -1,8 +1,22 @@
 <!-- Main Sidebar Container -->
+<?php
+    
+        
+        $email=$_SESSION['usuarioad'];
+        $sql = "SELECT * FROM docente WHERE email_doc = '$email'";
+        $resultado = $conexion->query($sql);
+        $us_externo = $resultado->fetch_assoc();
+        //echo "<pre>";
+        //var_dump($docente);
+        //echo "</pre>";    
+        $nom_adm = $us_externo['nombres'];
+        $ap_adm= $us_externo['ap_paterno'];
+    
+?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="../index.php" class="brand-link">
-      <img src="img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="img/logo_isc.svg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Expo-<b>Sistemas</b></span>
     </a>
 
@@ -14,7 +28,7 @@
           <img src="img/perrosim.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Admin Exposistemas</a>
+          <a href="#" class="d-block"><?php echo $nom_adm." ".$ap_adm ?></a>
         </div>
       </div>
 
@@ -151,7 +165,7 @@
           
           <li class="nav-header">GENERAR</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="Reg_DatCert.php" class="nav-link">
               <i class="fa-solid fa-id-card-clip"></i>
               <p>
                 Datos documento
@@ -167,7 +181,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="pag_admin_tables_inv.php" class="nav-link">
               <i class="fa-solid fa-person-chalkboard"></i>
               <p>
                 Ivitados

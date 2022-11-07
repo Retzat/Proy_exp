@@ -1,5 +1,24 @@
 <?php
 include("../../conexion_be.php");
+$sql = "SELECT * FROM datos_constancias WHERE id = 1";
+  $resultado = $conexion->query($sql);
+  $director = $resultado->fetch_assoc();
+  $nom_dir = $director['nombre_completo'];
+  $date_con = $director['Fecha'];
+  $grado_dir = $director['grado'];
+  $anio_dir = $director['anio'];
+  if ($grado_dir==1) {
+	$grado_d="Ing.";
+	}
+	else if($grado_dir==0){
+		$grado_d="Mtro.";
+	}
+	else if($grado_dir==2){
+		$grado_d="Mtro.";
+	}
+	else if($grado_dir==3){
+		$grado_d="Dr.";
+	}
 $res=mysqli_query($conexion,"select DISTINCT grado,rfc,nombres, ap_paterno, ap_materno from eventos,docente where asesor=rfc");
 if(mysqli_num_rows($res)>0){
 	
@@ -26,9 +45,9 @@ if(mysqli_num_rows($res)>0){
 		$letras="Por su destacada participación como                en el ";
 		$asesor='"Asesor"';
 		$evento='"Evento de';
-		$evento2='Exposistemas 2022"';
-		$fecha="07 de septiembre de 2022";
-		$director="Mtro. Fermín Parra Luna";
+		$evento2='Exposistemas '.$anio_dir. '"';
+		$fecha=$date_con." de ".$anio_dir;
+		$director=$grado_d." ".$nom_dir;
 		$mensaje2="el cual se llevó a cabo el día ".$fecha;
 		$largo=strlen($name);
 		if($largo>30){
@@ -53,4 +72,5 @@ if(mysqli_num_rows($res)>0){
 		//imagedestroy($image);
 	}
 }
+mysqli_close($conexion);
 ?>
