@@ -60,7 +60,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="pag_admin.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Estadísticas</p>
                 </a>
@@ -197,7 +197,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="pag_admin_Programa.php" class="nav-link">
+              <i class="fa-regular fa-clock"></i>
+              <p>
+                Programa
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="Elim_bd.php" class="nav-link">
               <i class="fa-solid fa-user-slash"></i>
               <p>
                 Eliminar todo

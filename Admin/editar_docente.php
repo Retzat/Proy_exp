@@ -105,7 +105,7 @@
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">RFC</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="rfc_do" placeholder="RFC" onkeypress="return check(event)" minlength="13" maxlength="13" value="<?php echo $rfc ?>" required>
+                      <input type="text" class="form-control" name="rfc_do" placeholder="RFC" onkeypress="return check(event)" readonly minlength="13" maxlength="13" value="<?php echo $rfc ?>" required>
                     </div>
                   </div>
                   <div class="form-group row">

@@ -75,7 +75,7 @@
                             <a href="editar_externo.php?email=<?php echo $externos['email_ex']; ?>" class="btn bg-orange btn-flat margin"><!-- Esta clase es de fontawesome -->
                               <i class="fas fa-pencil-alt"></i>Editar
                             </a>
-                            <a href="#" data-id="<?php echo $externos['email_ex']; ?>" data-tipo="externo" class="btn bg-maroon btn-flat margin borrar_registro">
+                            <a href="eliminar_externo.php?email=<?php echo $externos['email_ex']; ?>" data-id="<?php echo $externos['email_ex']; ?>" data-tipo="externo" class="btn bg-maroon btn-flat margin borrar_registro">
                               <i class="fas fa-trash"></i>Eliminar
                             </a>
                           </td>
@@ -114,7 +114,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
+  <script src="js/confirmacion.js"></script>
 <?php
   include_once 'templates/footer.php';
 ?>

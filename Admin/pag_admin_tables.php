@@ -98,7 +98,7 @@
                             <a href="editar_docente.php?email=<?php echo $docente['email_doc']; ?>" class="btn bg-orange btn-flat margin"><!-- Esta clase es de fontawesome -->
                               <i class="fas fa-pencil-alt"></i>Editar
                             </a>
-                            <a href="#" data-id="<?php echo $docente['email_doc']; ?>" data-tipo="docente" class="btn bg-maroon btn-flat margin borrar_registro">
+                            <a href="eliminar_docente.php?rfc=<?php echo $docente['rfc']; ?>" data-id="<?php echo $docente['email_doc']; ?>" data-tipo="docente" class="btn bg-maroon btn-flat margin borrar_registro">
                               <i class="fas fa-trash"></i>Eliminar
                             </a>
                           </td>
@@ -139,7 +139,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
+  <script src="js/confirmacion.js"></script>
 <?php
   include_once 'templates/footer.php';
 ?>
