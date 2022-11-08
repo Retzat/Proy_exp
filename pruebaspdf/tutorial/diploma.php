@@ -24,9 +24,9 @@ $pdf->SetTopMargin(20); $pdf->SetLeftMargin(20); $pdf->SetRightMargin(20);
 
 $pdf->AddPage(); 
 //  Print the edge of
-$pdf->Image("diploma.jpeg", 20, 20, 1880); 
+$pdf->Image("Constancia.jpg", 0, 0, 800); 
 // Print the certificate logo  
-$pdf->Image("Kotaro.png", 140, 180, 240); 
+$pdf->Image("firma.png", 140, 180, 240); 
 // Print the title of the certificate  
 $pdf->SetFont('times','B',80); 
 $pdf->Cell(720+10,200,"CERTIFICATE",0,0,'C'); 

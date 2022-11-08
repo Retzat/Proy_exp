@@ -125,6 +125,53 @@
                 </div>
                 <!-- /.card-footer -->
               </form>
+              <div class="card-header">
+                <h3 class="card-title">Formato de constancia</h3>
+              </div>
+              <!-- Aqui es para la imagen -->
+              <form class="form-horizontal" id="imagen" method="post" action="edita_const.php" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="exampleInputFile">Formato constancia(importante: el archivo debe ser en formato .jpg o .jpeg con el nombre de "Constancia", de tamaño a una hoja A4 o carta)</label>
+                    <br><a href="reconocimientos\Constancia.jpg">Formato actual: </a>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" name="subirconst" id="subir_cons" accept="image/jpeg">
+                        <label class="custom-file-label" for="exampleInputFile">Examinar</label>
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text">Subir</span>
+                      </div>
+                      <br>
+                      
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                        <button type="submit" class="btn btn-info" name="add_for">Subir imagen</button>
+                  </div>
+              </form>
+              <div class="card-header">
+                <h3 class="card-title">Firma (pruebas)</h3>
+              </div>
+              <form class="form-horizontal" id="imagen" method="post" action="edita_const.php" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="exampleInputFile">Sube una imagen de la firma sin fondo</label>
+                    <br><a href="reconocimientos\Constancia.jpg">Formato actual: </a>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" name="subirconst" id="subir_cons" accept="image/jpeg">
+                        <label class="custom-file-label" for="exampleInputFile">Examinar</label>
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text">Subir</span>
+                      </div>
+                      <br>
+                      
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                        <button type="submit" class="btn btn-info" name="add_firma">Firmar (en pruebas)</button>
+                  </div>
+              </form>
             </div>
         </div>
         <!-- /.card-body -->

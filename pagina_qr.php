@@ -62,16 +62,30 @@
     <ul class="funciones">
         <li>
             <i class="icon cs"></i>
-            <a href="cerrar_sesion.php">Cerrar sesion</a>
+            <a href="cerrar_sesion.php">Cerrar sesión</a>
         </li>
         <li>
         <i class="icon fb"></i>
             <a href="https://www.facebook.com/profile.php?id=100063955207064">Facebook</a>
         </li>
+        <?php
+        $res=mysqli_query($conexion,"select ruta from certificado where nc_gen='$nc'");
+        if(mysqli_num_rows($res)>0){
+            while($row=mysqli_fetch_assoc($res)){
+                $ruta=$row['ruta'];
+                //echo $ruta;
+            echo '<li>
+            <i class="icon fb"></i>
+                <a href="Admin/reconocimientos/'.$ruta.'">Certificado</a>
+            </li>';
+            }
+        }
+        ?>
     </ul>
     <div class="about">
-        <h2>Informacion para el estudiante</h2>
-        <P>Conserva este codigo QR, Pues se te pedira durante el evento</P>
+        <h2>Información para el estudiante</h2>
+        <P>Conserva este codigo QR, pues se te pedira durante el evento</P>
+        <P>Toma una foto con tu celular o imprimelo, es parte del registro de asistencia</P>
     </div>
 </body>
 </html>
